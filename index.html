@@ -1,0 +1,75 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Aaron Pratt, Created on October 25, 2023
+Email: aaron_pratt@student.uml.edu
+Description: Contains HTML code that provides user UI and to input values for the multiplication table
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table Generator</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/multTable.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- main header -->
+    <h1 class="mt-4">Dynamic Multiplication Table</h1>
+    <!-- labels for determining the min and max numbers for the rows and columns, error message and sliders -->
+    <form id="table-form" class="mt-4">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="min-column">Minimum Column Value:</label>
+          <input type="text" id="min-column" class="form-control" name="min-column" placeholder="Enter min-column">
+          <div class="error-message" id="min-column-error"></div>
+          <div class="slider" id="min-column-slider"></div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="max-column">Maximum Column Value:</label>
+          <input type="text" id="max-column" class="form-control" name="max-column" placeholder="Enter max-column">
+          <div class="error-message" id="max-column-error"></div>
+          <div class="slider" id="max-column-slider"></div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="min-row">Minimum Row Value:</label>
+          <input type="text" id="min-row" class="form-control" name="min-row" placeholder="Enter min-row">
+          <div class="error-message" id="min-row-error"></div>
+          <div class="slider" id="min-row-slider"></div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="max-row">Maximum Row Value:</label>
+          <input type="text" id="max-row" class="form-control" name="max-row" placeholder="Enter max-row">
+          <div class="error-message" id="max-row-error"></div>
+          <div class="slider" id="max-row-slider"></div>
+        </div>
+      </div>
+    </form>
+    <div id="tabs">
+      <ul>
+        <!-- Current table tab -->
+        <li><a href="#tabs-1">Current Table</a></li>
+      </ul>
+      <div id="tabs-1">
+        <!-- multiplication table -->
+        <table id="multiplication-table" class="table table-striped table-bordered"></table>
+        <!-- button for saving individual tables -->
+        <button id="save-table">Save Table</button>
+        <!-- button for deleting all saved tables -->
+        <button id="delete-all-tables">Delete All Tables</button>
+      </div>
+  </div>
+</body>
+</html>
+
+
+
+

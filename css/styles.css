@@ -1,0 +1,81 @@
+/*
+File: styles.css
+GUI Assignment: Creating an Interactive Dynamic Table
+Aaron Pratt, Created on October 25, 2023
+Email: aaron_pratt@student.uml.edu
+Description: Contains all styling for website
+*/
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #000;
+}
+
+th, td {
+  padding: 10px;
+}
+
+/* margin for button and table */
+#submit-button {
+  margin-top: 20px; 
+}
+
+#multiplication-table {
+  margin-top: 20px; 
+}
+
+/* alternating cell colors */
+#multiplication-table tr:nth-child(even) td {
+  background-color: rgb(237, 241, 178);
+}
+
+#multiplication-table tr:nth-child(odd) td {
+  background-color: rgb(233, 197, 15);
+}
+
+/* color for the first row and column */
+#multiplication-table tr:first-child td,
+#multiplication-table tr td:first-child {
+  background-color: #000000; 
+  color: white; 
+}
+
+/* style for saved tables */
+.saved-table {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.saved-table table {
+  width: 100%;
+}
+
+/* alternating cell colors for saved tables */
+.saved-table tr:nth-child(even) td {
+  background-color: rgb(237, 241, 178);
+}
+
+.saved-table tr:nth-child(odd) td {
+  background-color: rgb(233, 197, 15);
+}
+
+/* color for the first row and column in saved tables */
+.saved-table tr:first-child td,
+.saved-table tr td:first-child {
+  background-color: #000000;
+  color: white;
+}
+
+/* color for validatrion error messages */
+.error {
+  color: red;
+}
+
+
